@@ -1,0 +1,99 @@
+@import "../bs";
+
+.case-studies {
+  background: $primary;
+  .carousel.carousel-slider {
+    overflow: initial;
+    .control-dots {
+      bottom: -65px;
+    }
+  }
+  // .header {
+  //   font-size: 70px;
+  //   font-weight: 400;
+  // }
+  // .title {
+  //   font-size: 30px;
+  // }
+  // .description {
+  //   font-size: 20px;
+  //   letter-spacing: 0.5px;
+  //   line-height: 34px;
+  // }
+  .position-initial {
+    position: initial !important;
+  }
+  .image-section-mobile {
+    position: relative;
+    width: 90% !important;
+    background: white;
+    box-sizing: border-box;
+    clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    img {
+      top: 3px !important;
+      left: 4px !important;
+      width: 98% !important;
+      height: 98% !important;
+      // margin-bottom: 16px;
+      clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      padding: 2px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      div:first-child {
+        height: 288px;
+      }
+    }
+    @media screen and (max-width: 423px) {
+      div:first-child {
+        height: 200px;
+      }
+    }
+  }
+  .image-section {
+    position: absolute;
+    right: 0px;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    img {
+      width: 100%;
+      clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    }
+  }
+  padding: 64px 0;
+  .carousel {
+    .slide {
+      background: transparent !important;
+      background: transparent !important;
+      text-align: left;
+    }
+  }
+  .control-dots {
+    text-align: left !important;
+    padding-left: 0;
+    .dot {
+      width: 40px !important;
+      height: 5px !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      &.selected {
+        background: #ed8d58;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .xs-center {
+    text-align: center;
+  }
+  .case-studies {
+    .control-dots {
+      text-align: center !important;
+    }
+  }
+  .description {
+    display: flex;
+    line-height: 1.8;
+  }
+}

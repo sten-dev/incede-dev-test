@@ -1,0 +1,265 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "solutions"
+    label: "Solutions"
+    folder: "src/pages/solutions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "solutions-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "services"
+    label: "Services"
+    folder: "src/pages/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "services",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "text" }
+      - { label: "Image", name: "image", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "industries"
+    label: "Industries"
+    folder: "src/pages/industries"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "industries",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "text" }
+      - { label: "Image", name: "image", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "case-study"
+    label: "Case Study"
+    folder: "src/pages/case-study"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "case-study",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - {
+              label: Home,
+              name: home,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Sub Title, name: subTitle, widget: string },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+          - {
+              label: About,
+              name: about,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Sub Title, name: subTitle, widget: string },
+                  { label: Button Text, name: button, widget: string },
+                ],
+            }
+          - {
+              label: Location,
+              name: location,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Sub Title, name: subTitle, widget: string },
+                  { label: Phone, name: phone, widget: string },
+                  { label: Email, name: email, widget: string },
+                  { label: Address, name: address, widget: text },
+                ],
+            }
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Section,
+              name: section,
+              widget: list,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+  - name: "resources-library"
+    label: "Resources Library"
+    folder: "src/pages/resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "resources-library",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Video URL",
+          name: "videoUrl",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Image", name: "image", widget: "image", required: false }
+  - name: "resources-events"
+    label: "Resources Events"
+    folder: "src/pages/resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "resources-events",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Event Type",
+          name: "eventType",
+          widget: "select",
+          options: ["Webinar"],
+        }
+      - {
+          label: "Event Date",
+          name: "eventDate",
+          widget: "datetime",
+          date_format: "LL",
+          time_format: "LT",
+          format: "LLL",
+          picker_utc: true,
+        }
+      - {
+          label: "Time Zone",
+          name: "timeZone",
+          widget: "select",
+          options:
+            [
+              "UTC",
+              "ECT",
+              "EET",
+              "ART",
+              "EAT",
+              "MET",
+              "NET",
+              "PLT",
+              "IST",
+              "BST",
+              "VST",
+              "CTT",
+              "JST",
+              "ACT",
+              "AET",
+              "SST",
+              "NST",
+              "MIT",
+              "HST",
+              "AST",
+              "PST",
+              "PNT",
+              "MST",
+              "CST",
+              "EST",
+              "IET",
+              "PRT",
+              "PRT",
+              "AGT",
+              "BET",
+              "CAT",
+            ],
+          default: "UTC",
+        }
+      - {
+          label: "Service Type",
+          name: "serviceType",
+          widget: "select",
+          options: ["Watson Assistant", "Watson Discovery"],
+        }
+      - {
+          label: "Video URL",
+          name: "videoUrl",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Image", name: "image", widget: "image", required: false }
+  - name: "resources-case-studies"
+    label: "Resources Case Studies"
+    folder: "src/pages/resources/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "resources-case-studies",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "text" }
+      - { label: "Image", name: "image", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }

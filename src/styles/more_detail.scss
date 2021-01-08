@@ -1,0 +1,59 @@
+@import "../bs";
+
+section {
+  &.more-detail {
+    background: $primary;
+    .title {
+      letter-spacing: 0.76px;
+      line-height: 67px;
+    }
+    .sub-title {
+      // font-size: 22px;
+      letter-spacing: 0.55px;
+      line-height: 34px;
+    }
+    h1,
+    h6 {
+      color: $white;
+    }
+    .more-btn {
+      color: $white !important;
+      border-color: $white !important;
+      background-color: transparent !important;
+      margin-top: 16px;
+    }
+    .image-section {
+      // position: absolute;
+      // right: 0px;
+      width: 100%;
+      float: right;
+      display: flex;
+      justify-content: center;
+      img {
+        height: auto;
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    &.more-detail {
+      // .image-section {
+      //   img {
+      //     height: 420px;
+      //   }
+      // }
+    }
+  }
+}
+@media screen and (max-width: 599px) {
+  section {
+    &.partner {
+      img.xs-img {
+        width: 100%;
+      }
+    }
+  }
+}

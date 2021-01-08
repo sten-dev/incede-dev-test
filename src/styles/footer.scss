@@ -1,0 +1,81 @@
+@import "../bs";
+
+footer {
+  &.footer {
+    background: $gray !important;
+    .incede-img {
+      img {
+        width: 10em;
+        height: 6.5em;
+      }
+    }
+    a,
+    p,
+    h6,
+    address {
+      color: whitesmoke;
+    }
+    h6 {
+      font-weight: 500;
+      font-size: large;
+    }
+    .incede-img {
+      .row {
+        align-items: baseline;
+      }
+    }
+    // section {
+    //   padding: 120px 32px;
+    //   &.half-menu {
+    //     padding: 16px 0;
+    //   }
+    //   &.social {
+    //     padding: 120px 32px;
+    //   }
+    // }
+    .social {
+      margin-bottom: 24px;
+      img {
+        width: 2em;
+        height: 2em;
+      }
+      a {
+        padding: 12px;
+      }
+    }
+    li {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 576px) {
+      .incede-img {
+        padding-top: 22px;
+        img {
+          width: 6em;
+          height: 3.5em;
+        }
+      }
+
+      .social {
+        img {
+          width: 1.4em;
+          height: 1.4em;
+        }
+        a {
+          padding: 8px;
+        }
+      }
+      li {
+        margin-bottom: 8px !important;
+      }
+      p {
+        font-size: 12px !important;
+      }
+      .row {
+        div:not(:first-child) {
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}

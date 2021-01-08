@@ -1,0 +1,125 @@
+@import "../bs";
+
+.incede-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  // border-bottom: 1px solid #ddd;
+
+  .popover-main {
+    z-index: 99999 !important;
+  }
+  .nav-item {
+    padding: 18px 24px;
+    a {
+      color: $gray;
+      font-size: 18px;
+      letter-spacing: 0;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $secondary !important;
+    }
+    a.selected {
+      color: $secondary !important;
+      border-bottom: 2px solid $secondary;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .navbar-brand {
+    padding: 16px !important;
+  }
+}
+
+.incede-nav-shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.what-we-do-menu {
+  min-width: 100vw;
+  max-height: 480px;
+  h1 {
+    color: $light-gray;
+  }
+}
+.menu {
+  h6 {
+    a {
+      color: $gray;
+    }
+  }
+}
+.menu-links {
+  list-style: none;
+  padding-left: 0;
+  min-width: 200px;
+  margin-bottom: 0;
+  li {
+    display: flex;
+    cursor: pointer;
+    margin-left: -12px;
+    margin-right: -12px;
+    a {
+      color: #333;
+      text-decoration: none;
+      width: 100%;
+      padding: 8px 16px;
+    }
+    &:hover {
+      background: #ddd;
+    }
+  }
+}
+#whatWeDo {
+  .active-what-we-do {
+    transform: rotate(180deg);
+  }
+}
+@media screen and (max-width: 599px) {
+  #whatWeDo {
+    img {
+      transform: rotate(-90deg);
+      &.active-what-we-do {
+        transform: rotate(270deg);
+      }
+    }
+  }
+  .back-icon {
+    transform: rotate(90deg);
+  }
+  .wwd-sub-menu {
+    padding-left: 36px;
+  }
+  .what-we-do-menu {
+    max-height: 100vh !important;
+    overflow: auto !important;
+    .popover-body {
+      background: $primary;
+      color: #fff;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    ul {
+      padding-left: 16px;
+      h6 {
+        a {
+          font-size: 14px;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .incede-nav {
+    .nav-item {
+      padding: 18px 12px;
+    }
+  }
+}

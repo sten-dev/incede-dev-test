@@ -1,0 +1,61 @@
+@import "../../bs";
+
+section {
+  &.about-top-section {
+    background: $primary;
+    .title {
+      font-size: 70px;
+      letter-spacing: 0.76px;
+      line-height: 96px;
+      text-align: center;
+    }
+    .sub-title {
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      line-height: 34px;
+      text-align: center;
+    }
+    h1,
+    h6 {
+      color: $white;
+    }
+  }
+  &.about-bottom-section {
+    .pl-0 {
+      padding-left: 0 !important;
+    }
+    .image-section {
+      margin-top: -32px;
+      width: 100%;
+      max-width: 800px;
+      img {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        width: 100%;
+      }
+    }
+    .image-section2 {
+      width: 100%;
+      padding: 32px;
+      // img {
+      //   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      // }
+    }
+    // article {
+    //   padding-right: 60px;
+    // }
+    .title {
+      font-size: 50px;
+      letter-spacing: 0.76px;
+      line-height: 96px;
+    }
+    .sub-title {
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      line-height: 34px;
+    }
+    h1,
+    h6 {
+      color: $gray;
+    }
+  }
+}

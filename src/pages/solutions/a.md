@@ -1,0 +1,7 @@
+---
+templateKey: solutions-post
+title: a
+subTitle: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+image: /img/discovery.png
+---
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

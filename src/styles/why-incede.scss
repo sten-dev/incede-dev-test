@@ -1,0 +1,45 @@
+@import "../bs.scss";
+.why-incede-container {
+  .heading {
+    text-transform: uppercase;
+    font-weight: 600 !important;
+  }
+  .sub-title {
+    line-height: 32px !important;
+  }
+}
+.contact-us-section {
+  .header {
+    font-size: 75px !important;
+    font-weight: 600 !important;
+  }
+  .contact-us {
+    font-weight: 700 !important;
+  }
+}
+.image-section {
+  img {
+    width: 100%;
+    // margin-bottom: 16px;
+  }
+}
+.why-incede-btn {
+  color: $white !important;
+  border-color: $white !important;
+  background-color: transparent !important;
+  &.primary {
+    color: $primary !important;
+    border-color: $primary !important;
+  }
+  margin-top: 16px;
+  padding: 8px !important;
+  img {
+    width: 8px;
+    margin-top: -2px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why-incede-container .image-section {
+    display: none !important;
+  }
+}

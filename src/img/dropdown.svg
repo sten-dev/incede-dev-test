@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Icon/Dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="25_Inceed-Website-Copy" transform="translate(-1032.000000, -53.000000)">
+            <g id="Header/Home">
+                <g id="Icon/Dropdown" transform="translate(1027.000000, 45.000000)">
+                    <rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="24" height="24"></rect>
+                    <polyline id="Path-24" stroke="#474747" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6 9 12 15 18 9"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

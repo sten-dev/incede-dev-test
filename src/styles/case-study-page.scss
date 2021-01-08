@@ -1,0 +1,33 @@
+@import "../bs";
+
+.card-img {
+  //   height: 200px !important;
+  //   img {
+  //     height: 250px !important;
+  //   }
+
+  .gatsby-image-wrapper {
+    height: 220px;
+  }
+}
+.case-studies {
+  .card {
+    height: 100%;
+    .card-title {
+      text-align: left;
+      font-weight: 600;
+      // max-height: 70px;
+      // height: 100%;
+    }
+    .card-text {
+      text-align: left;
+    }
+  }
+}
+.cardTitle {
+  text-align: center;
+  margin-bottom: 6px !important;
+  font-weight: bold;
+  color: $primary;
+  font-size: 17px;
+}

@@ -1,0 +1,44 @@
+@import "../bs";
+
+section {
+  &.menu-section {
+    background: $primary;
+    height: 100% !important;
+    overflow: auto;
+    color: #ffff !important;
+    .menu-close {
+      cursor: pointer;
+    }
+    .menu-links {
+      li {
+        display: flex;
+        padding: 8px 16px;
+        a {
+          color: #ffff !important;
+          width: 100%;
+          padding: 8px 16px;
+        }
+      }
+    }
+    .menu-items {
+      line-height: 3;
+      font-size: 22px;
+      a {
+        color: #ffff !important;
+      }
+    }
+    .sub-menu {
+      overflow: auto;
+      // height: 100vh;
+      // max-height: calc(100vh - 194px) !important;
+      .sub-menu-items {
+        section {
+          padding-left: 1rem;
+          a {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

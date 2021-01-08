@@ -1,0 +1,21 @@
+@import "../../bs";
+
+section {
+  &.career {
+    background: $primary;
+    .title {
+      font-size: 70px;
+      letter-spacing: 0.76px;
+      line-height: 96px;
+    }
+    .sub-title {
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      line-height: 34px;
+    }
+    h1,
+    h6 {
+      color: $white;
+    }
+  }
+}

@@ -6,7 +6,8 @@ import ScrollMenu from "react-horizontal-scrolling-menu";
 let list = [
   { name: "Watson Assistant Services" },
   { name: "Watson Discovery Services" },
-  { name: "Watson API Services" }
+  { name: "Watson API Services" },
+  { name: "Applications Development" }
 ];
 const MenuItem = ({ text, selected }) => {
   return <div className={`menu-item ${selected ? "active" : ""}`}>{text}</div>;
@@ -42,7 +43,6 @@ class ServicesHeader extends Component {
     this.menuItems = Menu(list.slice(0, list.length), this.state.selected);
   }
   onSelect = key => {
-    console.log(`onSelect: ${key}`);
     this.setState({ selected: key });
     let url = "/services/watson-assistant-services";
     switch (key) {
@@ -54,6 +54,9 @@ class ServicesHeader extends Component {
         break;
       case "Watson API Services":
         url = "/services/watson-api";
+        break;
+      case "Applications Development":
+        url = "/services/applications-development";
         break;
       default:
         url = "/services/watson-assistant-services";
@@ -76,6 +79,10 @@ class ServicesHeader extends Component {
       case "/services/watson-api/":
         this.setState({ selected: "Watson API Services" });
         break;
+      case "/services/applications-development":
+      case "/services/applications-development/":
+        this.setState({ selected: "Applications Development" });
+        break;
       default:
         this.setState({ selected: "Watson Assistant Services" });
         break;
@@ -91,7 +98,7 @@ class ServicesHeader extends Component {
               <article className="text-left">
                 <h1 className="title display-3">Services</h1>
                 <h5 className="text-white sub-title">
-                  Incede's partners are experts in helping organizations
+                  Incede's resources are experts in helping organizations
                   understand and incorporate IBM’s Watson technology. We provide
                   end-to-end capabilities in developing conversational
                   interfaces and cognitive enterprise search applications with

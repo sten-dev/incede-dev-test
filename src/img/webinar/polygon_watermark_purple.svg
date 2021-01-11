@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="187px" height="233px" viewBox="0 0 187 233" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>polygonWatermark_Purple</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.1">
+        <g id="Incede-Landing-Page_v2" transform="translate(-1153.000000, -1381.000000)" fill="#5C4ABB">
+            <g id="Form" transform="translate(100.000000, 632.000000)">
+                <path d="M1175.87785,747.27051 L1296.319,834.776128 C1299.82388,837.322568 1301.29046,841.836241 1299.95172,845.956468 L1253.94729,987.543532 C1252.60855,991.663759 1248.76899,994.453362 1244.43672,994.453362 L1095.56328,994.453362 C1091.23101,994.453362 1087.39145,991.663759 1086.05271,987.543532 L1040.04828,845.956468 C1038.70954,841.836241 1040.17612,837.322568 1043.681,834.776128 L1164.12215,747.27051 C1167.62702,744.72407 1172.37298,744.72407 1175.87785,747.27051 Z" id="polygonWatermark_Purple" transform="translate(1170.000000, 882.000000) rotate(-345.000000) translate(-1170.000000, -882.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

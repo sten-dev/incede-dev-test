@@ -4,7 +4,7 @@ import "../../styles/industry-solution.scss";
 import CrevalCaseStudy from "../../img/industries/creval.png";
 import CaixaBankCaseStudy from "../../img/industries/caixa_bank.png";
 import CaixaBankMain from "../../img/industries/caixa_bank_main.png";
-import bankingImage from "../../img/industries/baking-1.png";
+// import bankingImage from "../../img/industries/baking-1.png";
 import CaseStudyCard from "../CaseStudyCard";
 import VideoCaseStudyCard from "../VideoCaseStudyCard";
 import BankOfScotland from "../../img/industry-solution/bank-of-scotland.png";

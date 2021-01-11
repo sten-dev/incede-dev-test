@@ -14,7 +14,7 @@ class Industries extends React.Component {
     this.setState({ activeIndex: index });
   };
   render() {
-    const { data } = this.props;
+    // const { data } = this.props;
     // const { edges: industries } = data.allMarkdownRemark;
     // console.log("industries", industries);
     const industries = [

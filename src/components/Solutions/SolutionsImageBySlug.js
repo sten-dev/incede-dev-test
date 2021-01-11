@@ -14,22 +14,18 @@ class SolutionsImageBySlug extends Component {
         return (
           <img className="service-img-slug" src={solutions1} alt="service-1" />
         );
-        break;
       case "customer-service":
         return (
           <img className="service-img-slug" src={solutions2} alt="service-2" />
         );
-        break;
       case "it-service-desk":
         return (
           <img className="service-img-slug" src={solutions3} alt="service-3" />
         );
-        break;
       case "sales-support-solutions":
         return (
           <img className="service-img-slug" src={solutions4} alt="service-3" />
         );
-        break;
       default:
         return (
           <img className="service-img-slug" src={solutions1} alt="service-1" />
@@ -37,7 +33,6 @@ class SolutionsImageBySlug extends Component {
     }
   };
   render() {
-    console.log("slug", this.props.slug);
     return (
       <React.Fragment>
         {this.props.slug && this.getSolutionsImageBySlug()}

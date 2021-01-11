@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/industry-solution.scss";
-import SupportField from "../../img/industry-solution/support-field.png";
-import Manufacturing from "../../img/industry-solution/Manufacturing.png";
-import Woodside from "../../img/industry-solution/Woodside.svg";
 import DelticCaseStudy from "../../img/industry-solution/deltic-group.png";
 import FlowersCaseStudy from "../../img/industry-solution/1800-flowers.png";
-import RetailImage from "../../img/industry-solution/retail-distribution.png";
 import CaseStudyCard from "../CaseStudyCard";
 
 class RetailDistribution extends Component {

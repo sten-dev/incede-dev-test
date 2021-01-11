@@ -89,9 +89,20 @@ small,
 .mt-16 {
   margin-top: 16px;
 }
+.mr-16 {
+  margin-right: 16px;
+}
 
 .h-100 {
   height: 100%;
+}
+#header {
+  .navbar-brand {
+    padding: 0 !important;
+  }
+  .incede-logo {
+    height: 48px;
+  }
 }
 
 .custom-modal {
@@ -307,6 +318,69 @@ small,
     margin-top: 0 !important;
   }
 }
+
+//MODAL-DIALOG-RIGHT
+.modal-dialog-slideout {
+  min-height: 100%;
+  margin: 0 0 0 auto !important;
+  background: #fff;
+
+  .modal-content {
+    border: 0;
+  }
+  .modal-header {
+    height: 69px;
+    // display: block;
+    .modal-title {
+      margin: 0 !important;
+    }
+    h4 {
+      float: left;
+    }
+  }
+  .modal-footer {
+    height: 69px;
+    display: block;
+  }
+}
+
+.custom-toast {
+  top: 12px;
+  right: 24px;
+  width: 320px;
+  z-index: 1052 !important;
+  border-radius: 4px !important;
+  max-height: 80px;
+}
+
+.modal.fade {
+  .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(100%, 0) scale(1);
+    transform: translate(100%, 0) scale(1);
+  }
+}
+.modal.fade.show {
+  .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    display: flex;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    height: 100%;
+    .modal-body {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
+
+.custom-anchor-button {
+  color: $secondary;
+}
+.custom-anchor-button:hover {
+  color: #fff !important;
+}
+
 @media screen and (max-width: 970px) {
   .sm-w-100 {
     width: 100%;
@@ -330,6 +404,20 @@ small,
       font-size: 14px;
     }
   }
+}
+.loading-modal-container {
+  > div {
+    margin: 0 auto !important;
+  }
+}
+.custom-demo-iframe-container {
+  background: #ffffff;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+  opacity: 0.8;
 }
 @-webkit-keyframes animatebottom {
   from {

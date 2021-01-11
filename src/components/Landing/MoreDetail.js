@@ -1,14 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import arrow from "../../img/arrow.svg";
 import "../../styles/more_detail.scss";
-import { Link } from "gatsby";
-import TeamImageBG from "../../img/Team_image_bg.png";
 import AiImage from "../../img/incede-home-page-middle.png";
 class MoreDetail extends React.Component {
   state = {};
   render() {
-    const { about } = this.props;
     return (
       <section className="more-detail">
         <Container>

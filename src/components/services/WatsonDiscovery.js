@@ -4,6 +4,8 @@ import "../../styles/services.scss";
 // import picture1 from "../../img/services/watson-discovery-1.png";
 // import picture2 from "../../img/services/watson-discovery-2.png";
 import picture3 from "../../img/services/wd-design-services.png";
+import enrichmentImage from "../../img/services/enrichment-development-services.png";
+import smartDocument from "../../img/services/smart-document.png";
 // import picture3 from "../../img/services/watson-discovery-3.png";
 import picture4 from "../../img/services/watson-discovery-4.png";
 import ServicesSmallCardsList from "./ServicesSmallCardsList";
@@ -33,12 +35,12 @@ const discoverySubItems = [
       "/img/watson-discovery/smart-document-development-inactive.png",
     title: "Smart Document Development Services"
   },
-  {
-    image: "/img/watson-discovery/query-relevancy-development.png",
-    inactiveImage:
-      "/img/watson-discovery/query-relevancy-development-inactive.png",
-    title: "Query Relevancy Development Services"
-  }
+  // {
+  //   image: "/img/watson-discovery/query-relevancy-development.png",
+  //   inactiveImage:
+  //     "/img/watson-discovery/query-relevancy-development-inactive.png",
+  //   title: "Query Relevancy Development Services"
+  // }
 ];
 
 export const Menu = (discoverySubItems, activeIndex) =>
@@ -50,7 +52,7 @@ export const Menu = (discoverySubItems, activeIndex) =>
           service={data}
           index={i}
           isActive={activeIndex === i ? true : false}
-          onItemClick={() => {}}
+          onItemClick={() => { }}
         />
       </div>
     );
@@ -97,17 +99,17 @@ class WatsonDiscovery extends Component {
           itemIndex = 1;
           break;
         case "enrich-development":
-          activeIndex = 1;
+          activeIndex = 2;
           itemIndex = 2;
           break;
         case "smart-document":
-          activeIndex = 1;
+          activeIndex = 3;
           itemIndex = 3;
           break;
-        case "query-relevancy":
-          activeIndex = 1;
-          itemIndex = 4;
-          break;
+        // case "query-relevancy":
+        //   activeIndex = 1;
+        //   itemIndex = 4;
+        //   break;
         default:
           activeIndex = 0;
           itemIndex = 0;
@@ -121,13 +123,7 @@ class WatsonDiscovery extends Component {
             discoverySubItems.slice(0, discoverySubItems.length),
             itemIndex
           ),
-          linkId:
-            hash === "watson-assistant-design" ||
-            hash === "watson-assistant-development"
-              ? "watson-discovery-id"
-              : window.innerWidth >= 576
-              ? hash + "-sm"
-              : hash + "-xs"
+          linkId: "watson-discovery-id"
         },
         () => {
           setTimeout(() => {
@@ -142,81 +138,46 @@ class WatsonDiscovery extends Component {
     this.setState({ activeIndex: index });
   };
   onSelect = key => {
-    if (key === "0" || key === "1") {
-      let activeIndex = Number(key);
-      let menuItems = Menu(
-        discoverySubItems.slice(0, discoverySubItems.length),
-        Number(key)
-      );
-      let linkId;
-      switch (Number(key)) {
-        case 0:
-          linkId = "watson-discovery-design";
-          break;
-        case 1:
-          linkId = "watson-discovery-development";
-          break;
-        default:
-          linkId = "watson-discovery-design";
-          break;
-      }
-      this.setState(
-        {
-          activeIndex: activeIndex,
-          menuItems: menuItems,
-          linkId: "watson-discovery-id"
-        },
-        () => {
-          setTimeout(() => {
-            document.getElementById("custom-react-link-discovery").click();
-            window.history.pushState(
-              "",
-              "",
-              `/services/watson-discovery-services#${linkId}`
-            );
-          });
-        }
-      );
-    } else {
-      let activeIndex = 1;
-      let menuItems = Menu(
-        discoverySubItems.slice(0, discoverySubItems.length),
-        Number(key)
-      );
-      let linkId;
-      switch (Number(key)) {
-        case 2:
-          linkId = "enrich-development";
-          break;
-        case 3:
-          linkId = "smart-document";
-          break;
-        case 4:
-          linkId = "query-relevancy";
-          break;
-        default:
-          linkId = "enrich-development";
-          break;
-      }
-
-      this.setState(
-        {
-          activeIndex: activeIndex,
-          menuItems: menuItems,
-          linkId: window.innerWidth >= 576 ? linkId + "-sm" : linkId + "-xs"
-        },
-        () => {
-          setTimeout(() => {
-            document.getElementById("custom-react-link-discovery").click();
-            window.history.pushState(
-              "",
-              "",
-              `/services/watson-discovery-services#${linkId}`
-            );
-          }, 1000);
-        }
-      );
+    let activeIndex = Number(key);
+    let menuItems = Menu(
+      discoverySubItems.slice(0, discoverySubItems.length),
+      Number(key)
+    );
+    let linkId;
+    switch (Number(key)) {
+      case 0:
+        linkId = "watson-discovery-design";
+        break;
+      case 1:
+        linkId = "watson-discovery-development";
+        break;
+      case 2:
+        linkId = "enrich-development";
+        break;
+      case 3:
+        linkId = "smart-document";
+        break;
+      default:
+        linkId = "watson-discovery-design";
+        break;
     }
+    this.setState(
+      {
+        activeIndex: activeIndex,
+        menuItems: menuItems,
+        linkId: "watson-discovery-id"
+      },
+      () => {
+        setTimeout(() => {
+          document.getElementById("custom-react-link-discovery").click();
+          window.history.pushState(
+            "",
+            "",
+            `/services/watson-discovery-services#${linkId}`
+          );
+        });
+      }
+    );
   };
   render() {
     let menu = this.state.menuItems;
@@ -546,10 +507,10 @@ class WatsonDiscovery extends Component {
                         </b>
                       </h4>
                       <div className="content py-3 p-sm-0">
-                        <p
+                        {/* <p
                           id="query-relevancy-sm"
                           className="d-none d-sm-block"
-                        ></p>
+                        ></p> */}
                         <p>
                           It is the process of teaching the solution, using
                           Smart Document Understand (SDU), how to understand the
@@ -558,10 +519,10 @@ class WatsonDiscovery extends Component {
                           training to ensure the system is ingesting other
                           documents in the collections.
                         </p>
-                        <p
+                        {/* <p
                           id="query-relevancy-xs"
                           className="d-sm-none pt-3"
-                        ></p>
+                        ></p> */}
                       </div>
                     </Col>
                     <Col xs={12} className="py-2">
@@ -582,6 +543,122 @@ class WatsonDiscovery extends Component {
                   </Row>
                 </Container>
               )}
+
+
+
+              {this.state.activeIndex === 2 && (
+                <Container>
+                  <Row>
+                    <Col>
+                      <h4 className="text-uppercase">
+                        <b className="color-grey">
+                          Enrichment Development Services
+                        </b>
+                      </h4>
+                      <div className="content">
+                        <p>
+                          Incede expert team will apply the understanding of what data is being brought into the enterprise search and search AI solutions. Our enrichments or meta data development services includes entity and category identification, semantics and parts of speech parsing, sentimental analysis, emotion identification, keywords, and concept tagging. We can also apply custom or specialized natural language enrichments using IBM Watson Knowledge Studio to identify entities and relationships unique to your business or organization. Advanced enrichment is used for complex content such as images and tables to improve the relevancy of answers.
+                        </p>
+                      </div>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={5}
+                      className="mt-4 mt-lg-0 d-flex align-items-center"
+                    >
+                      <div className="image-section">
+                        <img className="w-auto-h-100" src={enrichmentImage} alt="support image" />
+                      </div>
+                    </Col>
+                    <Col xs={12}>
+                      <div className="content-outcomes">
+                        <h5>
+                          <b className="color-grey">Outcomes</b>
+                        </h5>
+                        <ul>
+                          <li>
+                            <p>
+                              Increase user adoption by providing relevant results
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Build smarter search and discovery applications
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Standardized inventory of document collections and content areas to surface new insights in targeted workflows.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
+              {this.state.activeIndex === 3 && (
+                <Container>
+                  <Row>
+                    <Col>
+                      <h4 className="text-uppercase">
+                        <b className="color-grey">
+                          Smart Document Development Services
+                        </b>
+                      </h4>
+                      <div className="content">
+                        <p>
+                          Incede can help you with Smart Document Understand (SDU) capability of Watson Discovery. Our team can help you with the best practices on how to understand the structure of the documents and collections of documents. Management of splitting documents, importing models to further annotations of the document, Relevancy is assessed and improved through training to ensure the system is ingesting other documents in the collections. Incede’s expert team can help you with enrichments to your documents by additional enrichments to the text (and other) fields.
+                        </p>
+                      </div>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={5}
+                      className="mt-4 mt-lg-0 d-flex align-items-center"
+                    >
+                      <div className="image-section">
+                        <img className="w-auto-h-100" src={smartDocument} alt="support image" />
+                      </div>
+                    </Col>
+                    <Col xs={12}>
+                      <div className="content-outcomes">
+                        <h5>
+                          <b className="color-grey">Outcomes</b>
+                        </h5>
+                        <ul>
+                          <li>
+                            <p>
+                              Build smarter search and discovery applications
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Standardized inventory of document collections and content areas to surface new insights in targeted workflows.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Optimized relevancy training to improves users trust in answers.
+                            </p>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
+
+
+
+
+
+
             </Col>
           </Row>
         </Container>

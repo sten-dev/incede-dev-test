@@ -1,0 +1,16 @@
+@import "../bs";
+
+.add-demo-icon {
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+}
+.demo-card {
+  background: #f7f7f7 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: 2px solid transparent !important;
+  &:hover {
+    border: 2px solid #ddd !important;
+  }
+}

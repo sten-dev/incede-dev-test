@@ -29,7 +29,6 @@ class CaseStudiesMain extends React.Component {
             </Row>
           </Container>
         </section>
-        <Container></Container>
       </section>
     );
   }

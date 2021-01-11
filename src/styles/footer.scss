@@ -2,11 +2,28 @@
 
 footer {
   &.footer {
+    .linkedin-btn {
+      background-color: #2969b1;
+      border: 0;
+      border-radius: 3px;
+      padding: 7px 10px;
+      color: white;
+      font-weight: 600;
+      line-height: 32px;
+      vertical-align: middle;
+      transition: background-color 200ms ease-in-out;
+    }
+    .linkedin-logo {
+      width: 32px;
+      height: 32px;
+      vertical-align: top;
+      margin-right: 1rem;
+    }
     background: $gray !important;
     .incede-img {
       img {
-        width: 10em;
-        height: 6.5em;
+        width: 150px;
+        margin-bottom: 14px;
       }
     }
     a,
@@ -36,8 +53,9 @@ footer {
     .social {
       margin-bottom: 24px;
       img {
-        width: 2em;
-        height: 2em;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
       }
       a {
         padding: 12px;

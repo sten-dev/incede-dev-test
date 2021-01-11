@@ -22,6 +22,8 @@ const SolutionsSmallCardBody = ({ data, path }) => {
                       <p>{ele}</p>
                     </li>
                   );
+                } else {
+                  return <React.Fragment></React.Fragment>
                 }
               })}
             </ul>

@@ -1,0 +1,239 @@
+@import "../bs";
+
+.campaign-banking {
+  .incede-logo {
+    margin-left: -24px;
+  }
+  .container-width {
+    // max-width: 85vw;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #4f43a7;
+    // background-color: $primary;
+  }
+  .body1 {
+    background-color: $primary;
+    color: $white;
+    margin-top: -20px;
+    .title {
+      font-size: 50px !important;
+      font-weight: bold !important;
+      line-height: 68px !important;
+      margin-bottom: 30px;
+    }
+    .subtitle {
+      font-size: 20px;
+      line-height: 27px !important;
+      margin-bottom: 16px;
+    }
+    .img {
+      width: 85%;
+      border-radius: 8px;
+      //   padding: 2px;
+      //   background-color: #fff;
+    }
+  }
+  .pdf-preview {
+    margin: 16px;
+    img {
+      border: 1px solid grey;
+    }
+  }
+  .pdf-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pdf-ripple {
+    background: red;
+    width: 100%;
+    color: #fff;
+    height: 24px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .body2 {
+    .left {
+      border-right: 1px solid #cccccc;
+      padding-left: 56px;
+      padding-right: 32px;
+      .asset {
+        color: $primary;
+        font-size: 32px;
+        line-height: 43px;
+        font-weight: bold;
+        letter-spacing: 0.93px;
+      }
+      .img {
+        width: 310px;
+        border-radius: 6px;
+      }
+      .custom-list {
+        margin-left: -28px;
+      }
+      .subtitle {
+        line-height: 27px;
+        font-size: 20px;
+        display: flex;
+        color: #474747;
+
+        .polygon {
+          margin-right: 16px;
+          margin-top: 6px;
+          div {
+            -webkit-clip-path: polygon(
+              50% 0%,
+              100% 38%,
+              82% 100%,
+              18% 100%,
+              0% 38%
+            );
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            width: 14px;
+            height: 14px;
+            background-color: #474747;
+          }
+        }
+      }
+    }
+    .right {
+      padding-left: 32px;
+      padding-right: 32px;
+      .reg-header {
+        align-items: center;
+        // margin-top: -20px;
+        .title {
+          color: #474747;
+          font-weight: bold;
+          font-size: 26px;
+          line-height: 34px;
+        }
+        .subtitle {
+          color: #474747;
+          text-align: right;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+      .register {
+        .contact-us-mat-input {
+          border-bottom: 1px solid #cccccc !important;
+          color: black !important;
+          &::placeholder {
+            color: #474747 !important;
+          }
+        }
+        .term-con {
+          font-size: 14px;
+          line-height: 22px;
+          color: #474747;
+        }
+        .form-label {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 1.5;
+        }
+        .form-checkbox {
+          margin-left: 32px;
+        }
+        .display-flex {
+          display: flex;
+          align-items: baseline;
+        }
+        .others-text {
+          margin-left: 10px;
+        }
+        .error-message {
+          margin-left: inherit;
+          color: maroon;
+        }
+        .mb-5 {
+          margin-bottom: 5px !important;
+        }
+      }
+    }
+
+    .custom-container {
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-top: -144px;
+      background-color: #ffff;
+    }
+  }
+  .about {
+    background-color: $primary;
+    color: $white;
+    .image-section {
+      // position: absolute;
+      // right: 0px;
+      //   width: 100%;
+      float: right;
+      display: flex;
+      justify-content: center;
+      img {
+        height: auto;
+        width: 100% !important;
+      }
+    }
+    .title {
+      font-weight: bold;
+      //   margin-bottom: 56px ;
+      font-size: 40px;
+      line-height: 64px;
+      letter-spacing: 1.16px;
+    }
+
+    .subtitle {
+      line-height: 36px;
+      font-size: 26px;
+    }
+    .subtitle2 {
+      line-height: 27px;
+      font-size: 20px;
+    }
+  }
+  .footer {
+    background-color: #474747;
+    color: #c7c7c7;
+    padding: 8px 0;
+  }
+  .success {
+    h2 {
+      color: green;
+    }
+    .custom-link {
+      font-size: 20px;
+    }
+  }
+  .bottom-polygon {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-width {
+    max-width: 85vw !important;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .campaign-banking {
+    .body1 {
+      .title {
+        font-size: 32px !important;
+        line-height: initial !important;
+      }
+    }
+    .about {
+      .title {
+        font-size: 32px !important;
+      }
+    }
+  }
+}

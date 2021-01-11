@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import "../../styles/menu.scss";
-import { Row, Container, Col } from "reactstrap";
-import logo from "../../img/logo_white.svg";
+import { Container } from "reactstrap";
+import logo from "../../img/logo_white.png";
 import arrow from "../../img/arrow.svg";
 import close from "../../img/close.svg";
 import { Link } from "gatsby";
-import ServicesMenu from "./ServicesMenu";
-import SolutionsMenu from "./SolutionsMenu";
-import IndustriesMenu from "./IndustriesMenu";
 import ServiceMenu from "./static/ServiceMenu";
 import IndustryMenu from "./static/IndustryMenu";
 import SolutionMenu from "./static/SolutionMenu";
@@ -82,7 +79,7 @@ class MenuSection extends Component {
                 <img
                   src={logo}
                   alt="incede.ai"
-                  style={{ width: "10em", height: "5em" }}
+                  style={{ width: "220px" }}
                 />
               </div>
               <div className="align-self-center menu-close">

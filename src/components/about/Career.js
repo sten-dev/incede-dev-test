@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/about/career.scss";
 import { HTMLContent } from "../Content";
-import Partners from "./Partners";
 
 class Career extends React.Component {
   state = {};

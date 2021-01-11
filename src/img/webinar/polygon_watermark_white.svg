@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="241px" height="278px" viewBox="0 0 241 278" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>polygonWatermark_White</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.06">
+        <g id="Incede-Landing-Page_v2" transform="translate(0.000000, -164.000000)" fill="#FFFFFF">
+            <path d="M105.647082,156.244421 L235.298094,250.030816 C238.821395,252.579487 240.293773,257.112933 238.940398,261.245456 L189.094317,413.450223 C187.750593,417.553275 183.925304,420.330641 179.607831,420.337923 L19.0893717,420.608647 C14.7493923,420.615967 10.9001208,417.823063 9.56067867,413.694943 L-39.7562259,261.701755 C-41.093988,257.578813 -39.6232707,253.063445 -36.1139368,250.519269 L93.9164974,156.250571 C97.4147294,153.714443 102.146193,153.711963 105.647082,156.244421 Z" id="polygonWatermark_White" transform="translate(99.606045, 286.310464) rotate(23.000000) translate(-99.606045, -286.310464) "></path>
+        </g>
+    </g>
+</svg>

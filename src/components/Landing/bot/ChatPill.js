@@ -1,6 +1,4 @@
 import React from "react";
-import waIcon from "../../../img/waAgent.svg";
-import agentIcon from "../../../img/agent.png";
 import LastWAIcon from "./LastWAIcon";
 export const ChatPill = props => {
   return (

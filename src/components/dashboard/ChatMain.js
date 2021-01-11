@@ -213,6 +213,7 @@ class ChatMain extends Component {
               <>
                 <span>Active Sessions</span>
                 <img
+                  alt="refresh"
                   className="pointer"
                   onClick={this.refreshRooms}
                   src={require("../../img/refresh.svg")}
@@ -226,6 +227,7 @@ class ChatMain extends Component {
                     className="pointer"
                   >
                     <img
+                      alt="back"
                       className="pointer"
                       src={require("../../img/chevron-left.svg")}
                     />
@@ -243,7 +245,7 @@ class ChatMain extends Component {
                         onClick={() => this.setState({ modal: { isOpen: true } })}
                       >
                         DISCONNECT
-                  </Button>
+                      </Button>
                     )}
                 </>
               )}

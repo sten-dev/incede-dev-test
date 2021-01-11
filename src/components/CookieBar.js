@@ -30,6 +30,7 @@ class CookieBar extends Component {
                 <Col className="col pt-2 p-sm-0 text-right text-sm-center">
                   <img
                     src={closeImage}
+                    alt="close"
                     onClick={() => this.props.addCookie()}
                     className="close-icon pointer"
                   />

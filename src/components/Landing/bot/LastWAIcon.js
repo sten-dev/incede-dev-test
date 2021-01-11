@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import waIcon from "../../../img/waAgent.svg";
 import agentIcon from "../../../img/agent.png";

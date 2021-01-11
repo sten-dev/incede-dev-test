@@ -74,7 +74,7 @@ class ChatMain extends Component {
                 {this.state.window &&
                     this.state.window.location &&
                     this.state.window.location.pathname.indexOf("/admin/") !== 0 &&
-                    !this.state.modal && ["dashboard", "login"].indexOf(this.props.page) === -1 && (
+                    !this.state.modal && ["dashboard", "login", "custom-demo", "custom-demo-view"].indexOf(this.props.page) === -1 && (
                         <div onClick={this.toggle} className="bot-menu-btn left">
                             <img src={chat} alt="chat" />
                             <div className="d-none d-md-block">Let us converse</div>

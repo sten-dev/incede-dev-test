@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import logo from "../img/logo.svg";
+import logo from "../img/logo.jpg";
 import menu from "../img/menu.svg";
 import "../styles/navbar.scss";
 // import PageTransition from "gatsby-plugin-page-transitions";
@@ -14,17 +14,11 @@ import {
   NavItem,
   Popover,
   PopoverBody,
-  Container,
-  Row,
-  Col,
   Modal,
   ModalBody,
   ListGroup,
   ListGroupItem,
 } from "reactstrap";
-import SolutionsMenu from "./menu/SolutionsMenu";
-import ServicesMenu from "./menu/ServicesMenu";
-import IndustriesMenu from "./menu/IndustriesMenu";
 import dropdown from "../img/dropdown.svg";
 import MenuSection from "./menu/MenuSection";
 import ServiceMenu from "./menu/static/ServiceMenu";
@@ -139,7 +133,7 @@ class INavbar extends Component {
           <Navbar color="white" expand="lg" light>
             <NavbarBrand>
               <Link to="/">
-                <img src={logo} alt="incede" />
+                <img className="incede-logo" src={logo} alt="incede" />
               </Link>
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle}>
@@ -157,12 +151,11 @@ class INavbar extends Component {
                   <a>
                     Services{" "}
                     <img
-                      className={`${
-                        this.state.isServicesMenuOpen ? "active-what-we-do" : ""
-                      }`}
+                      className={`${this.state.isServicesMenuOpen ? "active-what-we-do" : ""
+                        }`}
                       alt="send"
                       src={dropdown}
-                      // onClick={props.onClick}
+                    // onClick={props.onClick}
                     />{" "}
                   </a>
                 </NavItem>
@@ -170,14 +163,13 @@ class INavbar extends Component {
                   <a>
                     Solutions{" "}
                     <img
-                      className={`${
-                        this.state.isSolutionsMenuOpen
+                      className={`${this.state.isSolutionsMenuOpen
                           ? "active-what-we-do"
                           : ""
-                      }`}
+                        }`}
                       alt="send"
                       src={dropdown}
-                      // onClick={props.onClick}
+                    // onClick={props.onClick}
                     />{" "}
                   </a>
                 </NavItem>
@@ -185,14 +177,13 @@ class INavbar extends Component {
                   <a>
                     Industries{" "}
                     <img
-                      className={`${
-                        this.state.isIndustriesMenuOpen
+                      className={`${this.state.isIndustriesMenuOpen
                           ? "active-what-we-do"
                           : ""
-                      }`}
+                        }`}
                       alt="send"
                       src={dropdown}
-                      // onClick={props.onClick}
+                    // onClick={props.onClick}
                     />{" "}
                   </a>
                 </NavItem>
@@ -200,14 +191,13 @@ class INavbar extends Component {
                   <a>
                     Resources{" "}
                     <img
-                      className={`${
-                        this.state.isResourcesMenuOpen
+                      className={`${this.state.isResourcesMenuOpen
                           ? "active-what-we-do"
                           : ""
-                      }`}
+                        }`}
                       alt="send"
                       src={dropdown}
-                      // onClick={props.onClick}
+                    // onClick={props.onClick}
                     />{" "}
                   </a>
                 </NavItem>

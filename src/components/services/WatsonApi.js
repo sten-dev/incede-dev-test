@@ -13,29 +13,14 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 const apiSubItems = [
   {
-    image: "/img/watson-api/text-to-speech.png",
-    inactiveImage: "/img/watson-api/text-to-speech-inactive.png",
-    title: "Text to speech"
-  },
-  {
     image: "/img/watson-api/speech-to-text.png",
     inactiveImage: "/img/watson-api/speech-to-text-inactive.png",
     title: "Speech to Text"
   },
   {
-    image: "/img/watson-api/language-translator.png",
-    inactiveImage: "/img/watson-api/language-translator-inactive.png",
-    title: "Language Translator"
-  },
-  {
-    image: "/img/watson-api/natural-language-classifier.png",
-    inactiveImage: "/img/watson-api/natural-language-classifier-inactive.png",
-    title: "Natural Language Classifier"
-  },
-  {
-    image: "/img/watson-api/personality-insights.png",
-    inactiveImage: "/img/watson-api/personality-insights-inactive.png",
-    title: "Personality Insights"
+    image: "/img/watson-api/text-to-speech.png",
+    inactiveImage: "/img/watson-api/text-to-speech-inactive.png",
+    title: "Text to speech"
   },
   {
     image: "/img/watson-api/tone-analyzer.png",
@@ -43,10 +28,25 @@ const apiSubItems = [
     title: "Tone Analyzer"
   },
   {
+    image: "/img/watson-api/language-translator.png",
+    inactiveImage: "/img/watson-api/language-translator-inactive.png",
+    title: "Language Translator"
+  },
+  {
     image: "/img/watson-api/visual-recognition.png",
     inactiveImage: "/img/watson-api/visual-recognition-inactive.png",
     title: "Visual Recognition"
-  }
+  },
+  // {
+  //   image: "/img/watson-api/natural-language-classifier.png",
+  //   inactiveImage: "/img/watson-api/natural-language-classifier-inactive.png",
+  //   title: "Natural Language Classifier"
+  // },
+  // {
+  //   image: "/img/watson-api/personality-insights.png",
+  //   inactiveImage: "/img/watson-api/personality-insights-inactive.png",
+  //   title: "Personality Insights"
+  // }
 ];
 
 export const Menu = (apiSubItems, activeIndex) =>
@@ -58,7 +58,7 @@ export const Menu = (apiSubItems, activeIndex) =>
           service={data}
           index={i}
           isActive={activeIndex === i ? true : false}
-          onItemClick={() => {}}
+          onItemClick={() => { }}
         />
       </div>
     );
@@ -96,30 +96,30 @@ class WatsonApi extends Component {
       let hash = window.location.hash.split("#")[1];
       let activeIndex = 0;
       switch (hash) {
-        case "text-to-speech":
+        case "speech-to-text":
           activeIndex = 0;
           break;
-        case "speech-to-text":
+        case "text-to-speech":
           activeIndex = 1;
           break;
-        case "language-translator":
+        case "tone-analyzer":
           activeIndex = 2;
           break;
-        case "natural-language":
+        case "language-translator":
           activeIndex = 3;
           break;
-        case "personality-insights":
+        case "visual-recognition":
           activeIndex = 4;
           break;
-        case "tone-analyzer":
-          activeIndex = 5;
-          break;
-        case "visual-recognition":
-          activeIndex = 6;
-          break;
+        // case "natural-language":
+        //   activeIndex = 3;
+        //   break;
+        // case "personality-insights":
+        //   activeIndex = 4;
+        //   break;
         default:
           activeIndex = 0;
-          hash = "text-to-speech";
+          hash = "speech-to-text";
           break;
       }
       this.setState(
@@ -144,28 +144,28 @@ class WatsonApi extends Component {
     let linkId;
     switch (Number(key)) {
       case 0:
-        linkId = "text-to-speech";
-        break;
-      case 1:
         linkId = "speech-to-text";
         break;
+      case 1:
+        linkId = "text-to-speech";
+        break;
       case 2:
-        linkId = "language-translator";
-        break;
-      case 3:
-        linkId = "natural-language";
-        break;
-      case 4:
-        linkId = "personality-insights";
-        break;
-      case 5:
         linkId = "tone-analyzer";
         break;
-      case 6:
+      case 3:
+        linkId = "language-translator";
+        break;
+      case 4:
         linkId = "visual-recognition";
         break;
+      // case 5:
+      //   linkId = "natural-language";
+      //   break;
+      // case 6:
+      //   linkId = "personality-insights";
+      //   break;
       default:
-        linkId = "text-to-speech";
+        linkId = "speech-to-text";
         break;
     }
     this.setState(
@@ -265,13 +265,13 @@ class WatsonApi extends Component {
         >
           <Row>
             <Col xs={12}>
-              {this.state.activeIndex === 0 && <TextToSpeech />}
-              {this.state.activeIndex === 1 && <SpeechToText />}
-              {this.state.activeIndex === 2 && <LanguageTranslator />}
-              {this.state.activeIndex === 3 && <NaturalLanguageClassifier />}
-              {this.state.activeIndex === 4 && <PersonalityInsights />}
-              {this.state.activeIndex === 5 && <ToneAnalyzer />}
-              {this.state.activeIndex === 6 && <VisualRecognition />}
+              {this.state.activeIndex === 0 && <SpeechToText />}
+              {this.state.activeIndex === 1 && <TextToSpeech />}
+              {this.state.activeIndex === 2 && <ToneAnalyzer />}
+              {this.state.activeIndex === 3 && <LanguageTranslator />}
+              {this.state.activeIndex === 4 && <VisualRecognition />}
+              {/* {this.state.activeIndex === 5 && <NaturalLanguageClassifier />}
+              {this.state.activeIndex === 6 && <PersonalityInsights />} */}
             </Col>
           </Row>
         </Container>

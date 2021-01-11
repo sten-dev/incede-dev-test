@@ -55,6 +55,19 @@ class Services extends React.Component {
             "Experience to know when, why and how to surface user personality traits, emotion and tone.Best practices for integrating text to speech and speech to text in applications, interactions and data.Optimized deep learning models to utilize industry and organizational specific vocabularies, phrases and terms."
         },
         path: "/services/watson-api"
+      },
+      {
+        data: {
+          image: "img/watson-assistant/development-services.png",
+          inactiveImage: "img/watson-assistant/development-services-inactive.png",
+          title: "Applications Development",
+          subTitle: "",
+          mainContext:
+            "Incede has the expertise and specializes in mobile and web app development. We can help in developing innovative cloud-based applications that are user-centric and outcome oriented across industries.",
+          sideContext:
+            "User centric design for high adoption.Skilled and experienced team for rapid development.Proven best practices that deliver high economic value"
+        },
+        path: "/services/applications-development"
       }
     ];
     return (

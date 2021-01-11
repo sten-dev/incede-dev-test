@@ -1,10 +1,8 @@
-import React from "react";
-import { Row, Col, Container } from "reactstrap";
-import leadershipImg from "../../../img/why-incede/leadership.png";
-import { Link } from "gatsby";
-import arrowPrimary from "../../../img/arrow-primary.png";
+import React from 'react';
+import { Row, Col, Container } from 'reactstrap';
+import leadershipImg from '../../../img/why-incede/leadership.png';
 
-const LeaderShipTeam = props => {
+const LeaderShipTeam = () => {
   return (
     <React.Fragment>
       <Container>
@@ -14,24 +12,22 @@ const LeaderShipTeam = props => {
             sm={12}
             md={12}
             lg={8}
-            className="d-flex align-items-center"
-          >
+            className='d-flex align-items-center'>
             <div>
-              <h1 className="text-left heading">Trusted Leadership</h1>
-              <h4 className="my-4">
+              <h1 className='text-left heading'>Trusted Leadership</h1>
+              <h4 className='my-4'>
                 A team of experienced thought leaders who inspire innovation and
                 commitment to customer success
               </h4>
-              <p className="sub-title">
-                Incede.ai is built ground-up by Locus Solutions, Inc.
-                specializing in IBM Watson technology. For nearly 15 years,
-                Locus Solutions has been an IBM Reseller Partner and worked with
-                hundreds of customers. Incede.ai extends and propels the success
-                of Locus Solutions with deep AI expertise in IBM Watson
-                solutions.
+              <p className='sub-title'>
+                Incede.ai is a division of <a href="http://locussolutions.com/" target="_blank">Locus Solutions</a>, Inc. specializing in
+                IBM Watson technology. For nearly 15 years, Locus Solutions has
+                been an IBM Reseller Partner and worked with hundreds of
+                customers. Incede.ai extends and propels the success of Locus
+                Solutions with deep AI expertise in IBM Watson solutions.
               </p>
               <br />
-              <p className="sub-title">
+              <p className='sub-title'>
                 With decades of management experience, innovation and business
                 value are core to the leadership team’s ideals. They are trusted
                 to think big and solve the most challenging business problems
@@ -49,10 +45,9 @@ const LeaderShipTeam = props => {
             sm={12}
             md={12}
             lg={4}
-            className="mt-4 mt-lg-0 d-flex align-items-center"
-          >
-            <div className="image-section">
-              <img src={leadershipImg} alt="leadership team" />
+            className='mt-4 mt-lg-0 d-flex align-items-center'>
+            <div className='image-section'>
+              <img src={leadershipImg} alt='leadership team' />
             </div>
           </Col>
         </Row>

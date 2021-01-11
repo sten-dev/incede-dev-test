@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import "../../styles/industry-solution.scss";
 import Enterprise1 from "../../img/industry-solution/cognitive-enterprise-1.png";
 import Enterprise2 from "../../img/industry-solution/cognitive-enterprise-2.png";
-import Manufacturing from "../../img/industry-solution/communications.png";
+// import Manufacturing from "../../img/industry-solution/communications.png";
 import VidahoraCaseSudy from "../../img/industry-solution/vidahora.png";
 import VodafoneCaseStudy from "../../img/industry-solution/vodafone-case-study.png";
 import VideoCaseStudyCard from "../VideoCaseStudyCard";

@@ -39,7 +39,7 @@ class Home extends React.Component {
                 </article>
               </Col>
               <Col lg={5} md={5} className="d-none d-md-block position-initial">
-                <div className="image-section gap-y">
+                <div className="image-section gap-y mt-5">
                   {/* <PreviewCompatibleImage
                     imageInfo={{
                       image: home.image,

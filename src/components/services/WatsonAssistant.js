@@ -7,9 +7,13 @@ import picture2 from "../../img/services/wa-design-services.png";
 // import picture3 from "../../img/services/watson-assistant-3.png";
 import picture3 from "../../img/services/wa-development-services.png";
 import picture4 from "../../img/services/watson-assistant-4.png";
+import solutionsTraining from "../../img/services/solutions-training-new.png";
+import integrationDevelopment from "../../img/services/integration-development.png";
 import ServicesSmallCardsList from "./ServicesSmallCardsList";
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import { Link, animateScroll as scroll } from "react-scroll";
+import channelDevelopment from "../../img/services/channel-development-new.png"
+
 
 const assistantSubItems = [
   {
@@ -47,7 +51,7 @@ export const Menu = (assistantSubItems, activeIndex) =>
           service={data}
           index={i}
           isActive={activeIndex === i ? true : false}
-          onItemClick={() => {}}
+          onItemClick={() => { }}
         />
       </div>
     );
@@ -95,15 +99,15 @@ class WatsonAssistant extends Component {
           itemIndex = 1;
           break;
         case "channel-development":
-          activeIndex = 1;
+          activeIndex = 2;
           itemIndex = 2;
           break;
         case "integration-development":
-          activeIndex = 1;
+          activeIndex = 3;
           itemIndex = 3;
           break;
         case "solution-training":
-          activeIndex = 1;
+          activeIndex = 4;
           itemIndex = 4;
           break;
         default:
@@ -119,13 +123,7 @@ class WatsonAssistant extends Component {
             assistantSubItems.slice(0, assistantSubItems.length),
             itemIndex
           ),
-          linkId:
-            hash === "watson-assistant-design" ||
-            hash === "watson-assistant-development"
-              ? "watson-assistant-id"
-              : window.innerWidth >= 576
-              ? hash + "-sm"
-              : hash + "-xs"
+          linkId: "watson-assistant-id"
         },
         () => {
           setTimeout(() => {
@@ -140,81 +138,49 @@ class WatsonAssistant extends Component {
     this.setState({ activeIndex: index });
   };
   onSelect = key => {
-    if (key === "0" || key === "1") {
-      let activeIndex = Number(key);
-      let menuItems = Menu(
-        assistantSubItems.slice(0, assistantSubItems.length),
-        Number(key)
-      );
-      let linkId;
-      switch (Number(key)) {
-        case 0:
-          linkId = "watson-assistant-design";
-          break;
-        case 1:
-          linkId = "watson-assistant-development";
-          break;
-        default:
-          linkId = "watson-assistant-design";
-          break;
-      }
-      this.setState(
-        {
-          activeIndex: activeIndex,
-          menuItems: menuItems,
-          linkId: "watson-assistant-id"
-        },
-        () => {
-          setTimeout(() => {
-            document.getElementById("custom-react-link").click();
-            window.history.pushState(
-              "",
-              "",
-              `/services/watson-assistant-services#${linkId}`
-            );
-          });
-        }
-      );
-    } else {
-      let activeIndex = 1;
-      let menuItems = Menu(
-        assistantSubItems.slice(0, assistantSubItems.length),
-        Number(key)
-      );
-      let linkId;
-      switch (Number(key)) {
-        case 2:
-          linkId = "channel-development";
-          break;
-        case 3:
-          linkId = "integration-development";
-          break;
-        case 4:
-          linkId = "solution-training";
-          break;
-        default:
-          linkId = "channel-development";
-          break;
-      }
-
-      this.setState(
-        {
-          activeIndex: activeIndex,
-          menuItems: menuItems,
-          linkId: window.innerWidth >= 576 ? linkId + "-sm" : linkId + "-xs"
-        },
-        () => {
-          setTimeout(() => {
-            document.getElementById("custom-react-link").click();
-            window.history.pushState(
-              "",
-              "",
-              `/services/watson-assistant-services#${linkId}`
-            );
-          }, 1000);
-        }
-      );
+    let activeIndex = Number(key);
+    let menuItems = Menu(
+      assistantSubItems.slice(0, assistantSubItems.length),
+      Number(key)
+    );
+    let linkId;
+    switch (Number(key)) {
+      case 0:
+        linkId = "watson-assistant-design";
+        break;
+      case 1:
+        linkId = "watson-assistant-development";
+        break;
+      case 2:
+        linkId = "channel-development";
+        break;
+      case 3:
+        linkId = "integration-development";
+        break;
+      case 4:
+        linkId = "solution-training";
+        break;
+      default:
+        linkId = "watson-assistant-design";
+        break;
     }
+    this.setState(
+      {
+        activeIndex: activeIndex,
+        menuItems: menuItems,
+        linkId: "watson-assistant-id"
+      },
+      () => {
+        setTimeout(() => {
+          document.getElementById("custom-react-link").click();
+          window.history.pushState(
+            "",
+            "",
+            `/services/watson-assistant-services#${linkId}`
+          );
+        });
+      }
+    );
   };
   render() {
     let menu = this.state.menuItems;
@@ -615,6 +581,172 @@ class WatsonAssistant extends Component {
                           services, including ongoing optimization of the
                           solution.
                         </p>
+                      </div>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
+
+
+
+
+              {this.state.activeIndex === 2 && (
+                <Container>
+                  <Row>
+                    <Col>
+                      <h4 className="text-uppercase">
+                        <b className="color-grey">
+                          Engage your customers on Multi-channels
+                        </b>
+                      </h4>
+
+                      <div className="content">
+                        <p>
+                          Incede enables our customers to engage with their users in a multi-channel experience in real-time across messaging platforms, social media and voice channels on different devices. Our solutions are providing a robust administrative features and enterprise-grade security.
+                        </p>
+                        <div className="content-outcomes">
+                          <h5>
+                            <b className="color-grey">Outcomes</b>
+                          </h5>
+                          <ul>
+                            <li>
+                              <p>
+                                Seamless integration with social media, voice and messaging platforms.
+                            </p>
+                            </li>
+                            <li>
+                              <p>
+                                Optimized dialogs based on deployment channel.
+                            </p>
+                            </li>
+                            <li>
+                              <p>
+                                Best-practices based development for greater sustainability.
+                            </p>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={5}
+                      className="mt-4 mt-lg-0 d-flex align-items-center"
+                    >
+                      <div className="image-section  d-flex justify-content-center">
+                        <img src={channelDevelopment} className="channel-development-img" alt="support image" />
+                      </div>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
+
+
+              {this.state.activeIndex === 3 && (
+                <Container>
+                  <Row>
+                    <Col>
+                      <h4 className="text-uppercase">
+                        <b className="color-grey">
+                          Integration Services
+                        </b>
+                      </h4>
+
+                      <div className="content">
+                        <p>
+                          Incede can help you to integrate your chatbots with any internal company database or third-party database for your end-user to have appropriate human-like responses. We have deep expertise in ingesting knowledge from your enterprise corpus in the form of chat logs, emails, knowledge bases, ERP, CRM, SCM, data, and documents. Our teams have deployed chatbot solutions with enterprise-grade capabilities like high scalability, top-of-the-line security, personalization besides other sophistications.
+                        </p>
+                        <div className="content-outcomes">
+                          <h5>
+                            <b className="color-grey">Outcomes</b>
+                          </h5>
+                          <ul>
+                            <li>
+                              <p>
+                                Seamless integration with your Enterprise sources.
+                            </p>
+                            </li>
+                            <li>
+                              <p>
+                                Enable bot-to-bot Integration.
+                            </p>
+                            </li>
+                            <li>
+                              <p>
+                                Provide enterprise-level security and scalability, deploy on-premise or Cloud.
+                            </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={5}
+                      className="mt-4 mt-lg-0 d-flex align-items-center"
+                    >
+                      <div className="image-section">
+                        <img src={integrationDevelopment} alt="support image" />
+                      </div>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
+
+
+
+              {this.state.activeIndex === 4 && (
+                <Container>
+                  <Row>
+                    <Col>
+                      <h4 className="text-uppercase">
+                        <b className="color-grey">
+                          Solution Training
+                        </b>
+                      </h4>
+
+                      <div className="content">
+                        <p>
+                          Incede team can assist you in initial training and re-training of the solution to parse, identify languages and various categories such as intents, actions, entities and the context around which responses will be framed and improved. Our approach is to start with mining historical live agent logs and create a pre-made training set. We run the test set against the trained classifier and collect performance metrics such as accuracy, precision, and recall.
+                        </p>
+                        <div className="content-outcomes">
+                          <h5>
+                            <b className="color-grey">Outcomes</b>
+                          </h5>
+                          <ul>
+                            <li>
+                              <p>
+                                Improve the learnability, usability and performance of the chatbots
+                            </p>
+                            </li>
+                            <li>
+                              <p>
+                                Provide high relevancy training
+                            </p>
+                            </li>
+                            <li>
+                              <p>
+                                Provide a system for continuous training of the chatbot.
+                            </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col
+                      xs={12}
+                      sm={12}
+                      md={4}
+                      lg={5}
+                      className="mt-4 mt-lg-0 d-flex align-items-center"
+                    >
+                      <div className="image-section">
+                        <img src={solutionsTraining} alt="support image" />
                       </div>
                     </Col>
                   </Row>

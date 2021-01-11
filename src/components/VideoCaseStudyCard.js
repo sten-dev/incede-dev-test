@@ -12,7 +12,7 @@ const VideoCaseStudyCard = (props) => {
           <div className="d-flex justify-content-center align-items-center">
             <img
               src={props.imageUrl}
-              alt="imageUrl"
+              alt="case study"
               className="case-study-img"
             />
           </div>
@@ -27,7 +27,7 @@ const VideoCaseStudyCard = (props) => {
           <p
             className={`pp-3 text-center ${
               props.viewClass ? props.viewClass : ""
-            }`}
+              }`}
           >
             <a
               className="case-study pointer bold"

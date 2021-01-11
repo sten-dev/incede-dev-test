@@ -25,6 +25,23 @@ section {
       padding-bottom: 8px !important;
     }
     .call-back-form {
+      .linkedin-btn {
+        background-color: #2969b1;
+        border: 0;
+        border-radius: 3px;
+        padding: 7px 10px;
+        color: white;
+        font-weight: 600;
+        line-height: 32px;
+        vertical-align: middle;
+        transition: background-color 200ms ease-in-out;
+      }
+      .linkedin-logo {
+        width: 32px;
+        height: 32px;
+        vertical-align: top;
+        margin-right: 1rem;
+      }
       max-width: 500px;
     }
     .options-container {
@@ -279,6 +296,26 @@ h5.list-group-item-heading {
 // }
 .power-by {
   font-size: 14px !important;
+}
+.pop-up-container {
+  &.xs {
+    .arrow {
+      display: none;
+    }
+  }
+  .languages-container {
+    list-style: none;
+    padding-left: 0;
+    min-width: 150px;
+    li {
+      padding: 8px 16px;
+      cursor: pointer;
+      &.selected,
+      &:hover {
+        background: #ddd;
+      }
+    }
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .bot-container {

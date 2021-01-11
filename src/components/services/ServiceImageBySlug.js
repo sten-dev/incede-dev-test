@@ -11,13 +11,10 @@ class ServiceImageBySlug extends Component {
         switch (this.props.slug) {
             case "virtual-assistance-chatbots":
                 return <img className="service-img-slug" src={service1} alt="service-1" />
-                break;
             case "2020-01-28-custom-ai-applications":
                 return <img className="service-img-slug" src={service2} alt="service-2" />
-                break;
             case "2020-01-28-cognitive-enterprise":
                 return <img className="service-img-slug" src={service3} alt="service-3" />
-                break;
             default:
                 return <img className="service-img-slug" src={service1} alt="service-1" />
         }

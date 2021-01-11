@@ -16,7 +16,7 @@ class Solutions extends React.Component {
     this.setState({ activeIndex: index });
   };
   render() {
-    const { data } = this.props;
+    // const { data } = this.props;
     // const { edges: solutions } = data.allMarkdownRemark;
     // console.log(solutions);
     const solutions = [

@@ -30,7 +30,7 @@ import CallBackForm from './bot/CallBackForm';
 import DiscoverySearchResults from './bot/DiscoverySearchResults';
 import ConfirmModal from '../ConfirmModal';
 import { getSpeechToTextConfig } from '../../../Service';
-import recognizeMicrophone from 'watson-speech/speech-to-text/recognize-microphone';
+// import recognizeMicrophone from 'watson-speech/speech-to-text/recognize-microphone';
 import samples from './samples.json';
 import voices from '../../../voices';
 
@@ -226,7 +226,7 @@ class BotSection extends Component {
     //  * a few other things for backwards compatibility and sane defaults
     // In addition to this, it passes other service-level options along to the RecognizeStream that
     // manages the actual WebSocket connection.
-    this.handleStream(recognizeMicrophone(this.getRecognizeOptions()));
+    // this.handleStream(recognizeMicrophone(this.getRecognizeOptions()));
   };
 
   getRecognizeOptions = extra => {

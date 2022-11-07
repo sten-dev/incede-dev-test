@@ -1,6 +1,7 @@
 ---
 templateKey: resources-case-studies
 title: Case Study
+filterText: Test filter
 subTitle: Sub heading
 image: /img/prudential.png
 ---

@@ -1,6 +1,7 @@
 ---
 templateKey: resources-case-studies
 title: London Borough of Redbridge
+filterText: Test filter
 subTitle: Cleaning up the streets with an AI-powered chatbot
 image: /img/london-rebridge.jpg
 ---
